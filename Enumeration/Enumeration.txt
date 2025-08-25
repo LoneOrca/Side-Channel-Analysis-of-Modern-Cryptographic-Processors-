@@ -1,0 +1,19 @@
+Section 1 - Initiating UART shell
+
+lone@lone-HP-Laptop-15s-fr2xxx:~$ lsusb
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 002: ID 30c9:0013 Luxvisions Innotech Limited HP TrueVision HD Camera
+Bus 001 Device 003: ID 0bda:b00c Realtek Semiconductor Corp. Bluetooth Radio
+Bus 001 Device 005: ID 413c:301a Dell Computer Corp. Dell MS116 Optical Mouse
+Bus 001 Device 006: ID 10c4:ea60 Silicon Labs CP210x UART Bridge
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+
+lone@lone-HP-Laptop-15s-fr2xxx:~$ ls -l /dev/serial/by-id
+total 0
+lrwxrwxrwx 1 root root 13 Feb 21 12:08 usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0 -> ../../ttyUSB0
+
+Providing wrong Baud rate, while using screen command!?
+
+lone@lone-HP-Laptop-15s-fr2xxx:~$ sudo screen /dev/ttyUSB0 9600
+
+
